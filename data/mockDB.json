@@ -1,0 +1,23 @@
+{
+    "users": [
+      { "id": 1, "name": "Alice", "email": "alice@example.com" },
+      { "id": 2, "name": "Bob", "email": "bob@example.com" }
+    ],
+    "orders": [
+      { "id": 101, "userId": 1, "total": 250 },
+      { "id": 102, "userId": 2, "total": 400 }
+    ],
+    "products": [
+      { "id": 201, "name": "Laptop", "price": 1000 },
+      { "id": 202, "name": "Phone", "price": 500 }
+    ],
+    "query_logs": [
+      { "id": 1, "query": "Get all users", "translatedSQL": "SELECT * FROM users;", "status": "valid" },
+      { "id": 2, "query": "Find Bob's orders", "translatedSQL": "SELECT * FROM orders WHERE userId = 2;", "status": "valid" }
+    ],
+    "query_explanations": [
+      { "id": 1, "sql": "SELECT * FROM users;", "explanation": "Fetches all user records from the database." },
+      { "id": 2, "sql": "SELECT * FROM orders WHERE userId = 2;", "explanation": "Retrieves all orders placed by the user with ID 2." }
+    ]
+  }
+  
