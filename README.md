@@ -191,5 +191,6 @@ curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List 
 ---
 
 ## 🏆 Contributing  
-Feel free to open issues or pull requests to improve this project.
+
+# Waiting for the interview call
 
