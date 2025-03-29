@@ -25,17 +25,20 @@ A lightweight backend service that simulates a simplified AI-powered data query 
 **Description**: Accepts a natural language query and returns mock data.  
 
 #### **Request Body** (JSON):  
-```json
+json
 { "query": "List all users" }
 
 
-Response Example:
+## Response Example:
 
+json
 { 
   "query": "List all users",
-  "data": [ { "id": 1, "name": "Alice" }, { "id": 2, "name": "Bob" } ]
+  "data": [ 
+    { "id": 1, "name": "Alice" }, 
+    { "id": 2, "name": "Bob" } 
+  ]
 }
-
 
 2️⃣ Query Explanation
 🔹 GET https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users
@@ -130,34 +133,33 @@ curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List 
 📁 Project Structure
 
 /MINI-QUERY-ENGINE
-│── /data                 # Mock database (mockDB.json)
-│── /src
-│   │── /controllers      # API Logic
-│   │   │── explainController.js
-│   │   │── queryController.js
-│   │   └── validateController.js
-│   │── /middlewares      # Authentication & Error Handling
-│   │   │── authMiddleware.js
-│   │   │── errorHandler.js
-│   │   └── validateQuery.js
-│   │── /routes           # API Routes
-│   │   └── queryRoutes.js
-│   │── /utils            # Query Translator & Validator
-│   │   │── queryTranslator.js
-│   │   └── sqlValidator.js
-│   │── /tests            # Unit Tests
-│   │   │── auth.test.js
-│   │   │── explain.test.js
-│   │   │── query.test.js
-│   │   └── validation.test.js
-│   │── app.js            # Express App Setup
-│   └── server.js         # Entry Point
-│── .env                  # Environment Variables
-│── .gitignore            # Git Ignore File
-│── mini-query-engine.postman_collection.json  # Postman Collection
-│── package-lock.json     # Dependency Lock File
-│── package.json          # Project Metadata
-│── README.md             # Documentation
-└── /node_modules         # Dependencies (Auto-generated)
-
+├── /data                  # Mock database (mockDB.json)
+├── /src
+│   ├── /controllers       # API Logic
+│   │   ├── explainController.js
+│   │   ├── queryController.js
+│   │   ├── validateController.js
+│   ├── /middlewares       # Authentication & Error Handling
+│   │   ├── authMiddleware.js
+│   │   ├── errorHandler.js
+│   │   ├── validateQuery.js
+│   ├── /routes            # API Routes
+│   │   ├── queryRoutes.js
+│   ├── /utils             # Query Translator & Validator
+│   │   ├── queryTranslator.js
+│   │   ├── sqlValidator.js
+│   ├── /tests             # Unit Tests
+│   │   ├── auth.test.js
+│   │   ├── explain.test.js
+│   │   ├── query.test.js
+│   │   ├── validation.test.js
+├── app.js                 # Express App Setup
+├── server.js              # Entry Point
+├── .env                   # Environment Variables
+├── .gitignore             # Git Ignore File
+├── mini-query-engine.postman_collection.json  # Postman Collection
+├── package-lock.json      # Dependency Lock File
+├── package.json           # Project Metadata
+├── README.md              # Documentation
+├── /node_modules          # Dependencies (Auto-generated)
 
