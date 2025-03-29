@@ -25,113 +25,137 @@ A lightweight backend service that simulates a simplified AI-powered data query 
 **Description**: Accepts a natural language query and returns mock data.  
 
 #### **Request Body** (JSON):  
-json
+```json
 { "query": "List all users" }
+```
 
-
-## Response Example:
-
-json
-{ 
+#### **Response Example**:  
+```json
+{
   "query": "List all users",
-  "data": [ 
-    { "id": 1, "name": "Alice" }, 
-    { "id": 2, "name": "Bob" } 
+  "data": [
+    { "id": 1, "name": "Alice" },
+    { "id": 2, "name": "Bob" }
   ]
 }
+```
 
-2️⃣ Query Explanation
-🔹 GET https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users
+---
 
-Description:
-Returns a breakdown of how the query is processed.
+### **2️⃣ Query Explanation**  
+🔹 **GET** `https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users`  
 
-Response Example:
-json
+**Description**: Returns a breakdown of how the query is processed.  
 
+#### **Response Example**:  
+```json
 {
   "originalQuery": "List all users",
   "explanation": "This query fetches relevant data using: SELECT * FROM users"
 }
+```
 
-3️⃣ Query Validation
-🔹 POST https://mini-query-engine-3svs.onrender.com/api/validate
+---
 
-Description:
-Checks if a query is in a valid format.
+### **3️⃣ Query Validation**  
+🔹 **POST** `https://mini-query-engine-3svs.onrender.com/api/validate`  
 
-Request Body:
-json
+**Description**: Checks if a query is in a valid format.  
 
+#### **Request Body**:  
+```json
 {
   "query": "List all users"
 }
+```
 
-Response Example:
-json
-
+#### **Response Example**:  
+```json
 {
   "query": "List all users",
   "isValid": true
 }
+```
 
-🔑 Authentication
-All requests must include an API Key in the headers:
+---
 
-Headers Example:
-json
+## 🔑 Authentication  
+All requests must include an API Key in the headers:  
 
+#### **Headers Example**:  
+```json
 {
   "api-key": "mysecretkey123"
 }
+```
 
-🚀 Deployment & Setup
-🔹 Local Setup
+---
 
-Clone the repository:
+## 🚀 Deployment & Setup  
+### 🔹 Local Setup  
 
+Clone the repository:  
+```sh
 git clone https://github.com/SuhelSharma/MINI-QUERY-ENGINE.git
 cd MINI-QUERY-ENGINE
+```
 
-Install dependencies:
+Install dependencies:  
+```sh
 npm install
+```
 
-Set up environment variables (.env file):
+Set up environment variables (`.env` file):  
+```sh
 PORT=5000
 API_KEY=mysecretkey123
+```
 
-Start the server:
-
+Start the server:  
+```sh
 npm start
-The server will be running at:
+```
+
+The server will be running at:  
+```
 http://localhost:5000
+```
 
-🧪 Testing API (Postman / Curl)
-📌 Postman Example for /api/explain
-Method: GET
-URL:
+---
 
+## 🤞 Testing API (Postman / Curl)  
+
+### 📌 Postman Example for `/api/explain`  
+**Method**: GET  
+**URL**:  
+```
 https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users
+```
 
-Headers:
+#### **Headers**:  
+```
 api-key: mysecretkey123
+```
 
-Response:
-json
-
+#### **Response**:  
+```json
 {
   "originalQuery": "List all users",
   "explanation": "This query fetches relevant data using: SELECT * FROM users"
 }
+```
 
-📌 Curl Example
+---
 
+### 📌 Curl Example  
+```sh
 curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users" -H "api-key: mysecretkey123"
+```
 
+---
 
-
-📁 Project Structure
-
+## 📝 Project Structure  
+```
 /MINI-QUERY-ENGINE
 ├── /data                  # Mock database (mockDB.json)
 ├── /src
@@ -162,4 +186,10 @@ curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List 
 ├── package.json           # Project Metadata
 ├── README.md              # Documentation
 ├── /node_modules          # Dependencies (Auto-generated)
+```
+
+---
+
+## 🏆 Contributing  
+Feel free to open issues or pull requests to improve this project.
 
