@@ -85,8 +85,19 @@ All requests must include an API Key in the headers:
 #### **Headers Example**:  
 ```json
 {
-  "api-key": "mysecretkey123"
+  "api-key": "YOUR_API_KEY_HERE"
 }
+<<<<<<< HEAD
+```
+
+---
+
+## 🚀 Deployment & Setup  
+### 🔹 Local Setup  
+
+
+##🔐 Security Note: Set your API key in a .env file or as an environment variable. Never expose sensitive credentials in public repositories.
+
 ```
 
 ---
@@ -108,7 +119,11 @@ npm install
 Set up environment variables (`.env` file):  
 ```sh
 PORT=5000
+<<<<<<< HEAD
 API_KEY=mysecretkey123
+=======
+API_KEY=YOUR_API_KEY_HERE
+>>>>>>> ea1c3a5 (done)
 ```
 
 Start the server:  
@@ -134,7 +149,11 @@ https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users
 
 #### **Headers**:  
 ```
+<<<<<<< HEAD
 api-key: mysecretkey123
+=======
+api-key: YOUR_API_KEY_HERE
+>>>>>>> ea1c3a5 (done)
 ```
 
 #### **Response**:  
@@ -149,7 +168,11 @@ api-key: mysecretkey123
 
 ### 📌 Curl Example  
 ```sh
+<<<<<<< HEAD
 curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users" -H "api-key: mysecretkey123"
+=======
+curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users" -H "api-key: YOUR_API_KEY_HERE"
+>>>>>>> ea1c3a5 (done)
 ```
 
 ---
@@ -192,5 +215,9 @@ curl -X GET "https://mini-query-engine-3svs.onrender.com/api/explain?query=List 
 
 ## 🏆 Contributing  
 
+<<<<<<< HEAD
 # Waiting for the interview call
+=======
+# Waiting for the Interview Call
+>>>>>>> ea1c3a5 (done)
 
