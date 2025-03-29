@@ -95,14 +95,6 @@ All requests must include an API Key in the headers:
 
 ## 🚀 Deployment & Setup  
 ### 🔹 Local Setup  
-
-
-
-
-```
-
----
-
 Clone the repository:  
 ```sh
 git clone https://github.com/SuhelSharma/MINI-QUERY-ENGINE.git
