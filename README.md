@@ -1,49 +1,41 @@
-                     Mini Data Query Simulation Engine 🚀
+# Mini Data Query Simulation Engine 🚀  
+A lightweight backend service that simulates a simplified AI-powered data query system.  
 
-A lightweight backend service that simulates a simplified AI-powered data query system.
+## 🔥 Features  
+✅ **Natural Language Query Processing** (`/api/query`)  
+✅ **Query Explanation** (`/api/explain`)  
+✅ **Query Validation** (`/api/validate`)  
+✅ **Mock Database Connection**  
+✅ **Basic Authentication & Error Handling**  
+✅ **Deployable & Well-Documented API**  
 
-🔥 Features
-✅ Natural Language Query Processing (/api/query)
-✅ Query Explanation (/api/explain)
-✅ Query Validation (/api/validate)
-✅ Mock Database Connection
-✅ Basic Authentication & Error Handling
-✅ Deployable & Well-Documented API
+## 🛠️ Tech Stack  
+- **Backend**: Node.js, Express.js  
+- **Database**: In-memory JSON (`mockDB.json`)  
+- **Authentication**: API Key-based security  
+- **Deployment**: [Render](https://mini-query-engine-3svs.onrender.com)  
 
-🛠️ Tech Stack
-Backend: Node.js, Express.js
+---
 
-Database: In-memory JSON (mockDB.json)
+## 📌 API Endpoints  
 
-Authentication: API Key-based security
+### **1️⃣ Query Processing**  
+🔹 **POST** `https://mini-query-engine-3svs.onrender.com/api/query`  
 
-Deployment: Render (https://mini-query-engine-3svs.onrender.com)
+**Description**: Accepts a natural language query and returns mock data.  
 
-📌 API Endpoints
+#### **Request Body** (JSON):  
+```json
+{ "query": "List all users" }
 
-1️⃣ Query Processing
-🔹 POST https://mini-query-engine-3svs.onrender.com/api/query
-
-Description:
-Accepts a natural language query and returns mock data.
-
-Request Body:
-json
-
-{
-  "query": "List all users"
-}
 
 Response Example:
-json
 
-{
+{ 
   "query": "List all users",
-  "data": [
-    { "id": 1, "name": "Alice" },
-    { "id": 2, "name": "Bob" }
-  ]
+  "data": [ { "id": 1, "name": "Alice" }, { "id": 2, "name": "Bob" } ]
 }
+
 
 2️⃣ Query Explanation
 🔹 GET https://mini-query-engine-3svs.onrender.com/api/explain?query=List all users
